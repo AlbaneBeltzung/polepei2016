@@ -79,3 +79,18 @@
 .box-hover:hover{
     background-color: rgba(45, 135, 181, 0.2);
 }
+
+#game{
+    display: none;
+}
+
+
+
+.game-level{
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.centered{
+    text-align: center;
+}

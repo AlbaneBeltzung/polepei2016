@@ -31,6 +31,10 @@
              templateUrl : "templates/trainings.html"
         })
 
+            .when("/content-mastery", {
+                templateUrl : "templates/content-mastery.html"
+            })
+
             .otherwise('/', {
             templateUrl: 'templates/inicio.html'
         })
@@ -57,4 +61,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
+}
+
+function openGame(target){
+    document.getElementById(target).style.display = "block"
 }
