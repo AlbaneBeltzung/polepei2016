@@ -66,3 +66,14 @@ function closeNav() {
 function openGame(target){
     document.getElementById(target).style.display = "block"
 }
+function closeGame(target){
+    document.getElementById(target).style.display = "none"
+}
+
+function togGame(target) {
+    if (document.getElementById(target).style.display == "none") {
+        document.getElementById(target).style.display = "block"
+    } else {
+        document.getElementById(target).style.display = "none"
+    }
+}
