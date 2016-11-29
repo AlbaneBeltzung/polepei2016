@@ -19,13 +19,19 @@
         numero: 0
     });
 
+
     aires.config(['$routeProvider', function($routeProvider){
-        $routeProvider.
-        when('/', {
+        $routeProvider
+            .when('/', {
             templateUrl: 'templates/inicio.html',
             controller: 'InicioController'
-        }).
-        otherwise('/', {
+        })
+
+            .when("/trainings", {
+             templateUrl : "templates/trainings.html"
+        })
+
+            .otherwise('/', {
             templateUrl: 'templates/inicio.html'
         })
     }]);
