@@ -2,13 +2,11 @@
 <html lang="es" ng-app="aires">
 <head>
     <meta charset="UTF-8">
-    <title>21 Grados</title>
+    <title>CiTE</title>
     <script src="js/libs/firebase.js"></script>
     <script>
         // Initialize Firebase
-        var config = {
-           
-        };
+        var config = {};
         firebase.initializeApp(config);
     </script>
     <link href="css/style.css" rel="stylesheet">
@@ -25,7 +23,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <!--div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -36,7 +34,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Link</a></li>
@@ -53,12 +51,6 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Link</a></li>
                     <li class="dropdown">
@@ -72,11 +64,37 @@
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+
+                <!-- Use any element to open the sidaenav -->
+
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </form>
+            <div class="navbar-right">
+                <img class="navbar-icon" src="assets/settings.png">
+                <img class="navbar-icon" src="assets/user.png">
+            </div>
+            
+            
+            <span onclick="openNav()"><img class="hamburger"
+                                           src="https://openclipart.org/image/2400px/svg_to_png/221605/menu-icon.png"></span>
+        </div><!-- /.navbar-collapse -->
+        <div id="mySidenav" class="sidenav">
+            <img class="logo sidenav" src="http://logonoid.com/images/cemex-logo.png">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Projects</a>
+            <a href="#">Notifications</a>
+            <a href="#">Training</a>
+            <a href="#">Archive</a>
+        </div>
     </nav>
 </header>
-<div ng-view ></div>
+
+
+<div ng-view></div>
 
 <footer ng-include="templates/footer.html"></footer>
 
