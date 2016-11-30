@@ -7,8 +7,6 @@
     max-height: 30px;
 }
 
-
-
 .navbar-icon{
     height:30px;
     vertical-align: middle;
@@ -84,7 +82,16 @@
     display: none;
 }
 
+.hint{
+    display: none;
+}
 
+.icon-hint{
+    height:30px;
+    vertical-align: middle;
+    margin: 10px 10px 0 0;
+    float:left;
+}
 
 .game-level{
     background-color: #f9f9f9;
