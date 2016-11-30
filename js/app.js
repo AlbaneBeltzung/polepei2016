@@ -52,6 +52,11 @@ function closeNav() {
 }
 
 
+var levels = ['a1', 'a2'];
+var hintStrings = [['firetruck ...', 'color of a hammer', 'what color do bulls hate?', 'blood'],
+    ['the sea is ...', 'eye color with pigmentation problem', 'classic business color', 'known song from the 90s']];
+var answers = ['red', 'blue'];
+
 function togGame(target) {
     if (document.getElementById(target).style.display == "none") {
         showHint();
@@ -61,10 +66,41 @@ function togGame(target) {
     }
 }
 
+
+var currentScore = 60;
+function showCurrentScore() {
+    document.querySelector('.current-score').innerHTML = currentScore;
+}
+
 var count = 0;
+var maxHints = 4;
 function showHint() {
-    var hints = document.getElementsByClassName("hint");
-    newHint = hints[count];
-    newHint.style.display = "block";
-    count = count+1;
+    if(count < maxHints) {
+        if (count >= 1) {
+            currentScore = currentScore - 10;
+        }
+        showCurrentScore();
+        var hints = document.getElementsByClassName("hint");
+        newHint = hints[count];
+        newHint.style.display = "block";
+        count = count + 1;
+    }
+}
+
+var totalScore = 0;
+function showTotalScore() {
+    document.querySelector('.total-score').innerHTML = totalScore;
+}
+
+function addNewScored() {
+    totalScore = totalScore + currentScore;
+}
+
+function verify() {
+        addNewScored();
+        showTotalScore();
+}
+
+function bla(){
+
 }

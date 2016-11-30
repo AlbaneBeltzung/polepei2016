@@ -101,3 +101,15 @@
 .centered{
     text-align: center;
 }
+
+
+.score-table{
+    background: #a5c5ff;
+}
+
+
+/*Standard classes*/
+
+.align-right{
+    text-align: right;
+}
