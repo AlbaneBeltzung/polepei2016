@@ -67,6 +67,8 @@ function togGame(target) {
 }
 
 
+
+
 var currentScore = 60;
 function showCurrentScore() {
     document.querySelector('.current-score').innerHTML = currentScore;
@@ -74,13 +76,13 @@ function showCurrentScore() {
 
 var count = 0;
 var maxHints = 4;
+var hints = document.getElementsByClassName("hint");
 function showHint() {
     if(count < maxHints) {
         if (count >= 1) {
             currentScore = currentScore - 10;
         }
         showCurrentScore();
-        var hints = document.getElementsByClassName("hint");
         newHint = hints[count];
         newHint.style.display = "block";
         count = count + 1;
@@ -101,6 +103,21 @@ function verify() {
         showTotalScore();
 }
 
-function bla(){
-
+function switchGame(game){
+    var count = 0;
+    for(hint in hints){
+        hints[hint].innerHTML = game.hints[count].toString();
+        count = count+1;
+    }
 }
+
+var game1 = {
+    answer: "red",
+    hints: ["blub", "blab", "hello", "yeah"]
+};
+
+var game2 = {
+    answer: "blue",
+    hints: ["I'm", "blue", "dabadi", "dabada"]
+};
+
