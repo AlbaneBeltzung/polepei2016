@@ -51,12 +51,6 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
-
-var levels = ['a1', 'a2'];
-var hintStrings = [['firetruck ...', 'color of a hammer', 'what color do bulls hate?', 'blood'],
-    ['the sea is ...', 'eye color with pigmentation problem', 'classic business color', 'known song from the 90s']];
-var answers = ['red', 'blue'];
-
 function togGame(target) {
     if (document.getElementById(target).style.display == "none") {
         showHint();
@@ -65,9 +59,6 @@ function togGame(target) {
         document.getElementById(target).style.display = "none";
     }
 }
-
-
-
 
 var currentScore = 60;
 function showCurrentScore() {

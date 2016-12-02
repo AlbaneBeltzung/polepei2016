@@ -50,9 +50,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 score-table align-right">
-            <h3>Your Total Score</h3>
-            <h4 class="total-score"></h4>
+        <div class="col-md-3 score">
+            <h3 class="align-right">Your Total Score</h3>
+            <div class="score-table centered">
+                <h4 class="total-score"></h4>
+            </div>
         </div>
     </div>
 
@@ -92,17 +94,15 @@
                         labore 4</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <button onclick="showHint()">Get Another Hint</button>
-                <button>Skip</button>
-
-                    <h3>Possible Score</h3>
+            <div class="col-md-3 score align-right">
+                    <h3 class>Possible Score</h3>
                     <h4 class="current-score"></h4>
-
+                    <button onclick="showHint()">Get Another Hint</button>
+                    <button>Skip</button>
             </div>
         </div>
         <input type="text">
-        <button onclick="verify()">Verify</button>
+        <button id="button-verify" onclick="verify()">Verify</button>
 
     </section>
 

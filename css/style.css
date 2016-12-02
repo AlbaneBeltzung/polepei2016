@@ -57,6 +57,11 @@
     margin-left: 50px;
 }
 
+a {
+    color: black;
+    text-decoration: none !important;
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
@@ -96,6 +101,24 @@
 .game-level{
     background-color: #f9f9f9;
     padding: 10px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-bottom: 3vh;
+
+    -o-transition:.6s;
+    -moz-transition:.6s;
+    -webkit-transition:.6s;
+    transition:.6s;
+}
+
+
+.game-level h4{
+    color: black;
+}
+
+.game-level:hover{
+    background-color: gainsboro;
 }
 
 .centered{
@@ -104,12 +127,59 @@
 
 
 .score-table{
-    background: #a5c5ff;
+    background: rgba(1, 57, 120, 0.5);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    line-height:100px;
+    float:right;
 }
+
+.total-score{
+line-height: 130px;
+}
+
+button{
+    background: rgba(1, 57, 120, 0.3);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 40px;
+
+    -o-transition:.6s;
+    -moz-transition:.6s;
+    -webkit-transition:.6s;
+    transition:.6s;
+}
+
+button:hover{
+    background: rgba(1, 57, 120, 0.5);
+}
+
+#button-verify{
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+}
+
+
 
 
 /*Standard classes*/
 
 .align-right{
     text-align: right;
+    float:right;
 }
+
