@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="aires">
+<html lang="en" ng-app="cite">
 <head>
     <meta charset="UTF-8">
     <title>CiTE</title>
-    <script src="js/libs/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {};
-        firebase.initializeApp(config);
-    </script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/libs/bootstrap.min.css" rel="stylesheet">
     <link href="css/libs/font-awesome.min.css" rel="stylesheet">
@@ -19,54 +13,9 @@
     <script src="js/controllers.js"></script>
 </head>
 <body>
-<header>
+<header ng-controller="headerController">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!--div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <!--div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <!-- Use any element to open the sidaenav -->
-
 
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
@@ -79,12 +28,11 @@
             </div>
 
 
-            <span onclick="openNav()"><img class="hamburger"
-                                           src="https://openclipart.org/image/2400px/svg_to_png/221605/menu-icon.png"></span>
+            <span ng-click="openNav()"><img class="hamburger" src="https://openclipart.org/image/2400px/svg_to_png/221605/menu-icon.png"></span>
         </div><!-- /.navbar-collapse -->
         <div id="mySidenav" class="sidenav">
             <img class="logo sidenav" src="http://logonoid.com/images/cemex-logo.png">
-            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="closebtn" ng-click="closeNav()">&times;</a>
             <a href="#">Dashboard</a>
             <a href="#">Projects</a>
             <a href="#">Notifications</a>
