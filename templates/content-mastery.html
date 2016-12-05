@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a  ng-click="toGame('game5')">
+                        <a ng-click="toGame('game5')">
                             <div class="game-level centered">
                                 <h4>Level 5</h4>
                             </div>
@@ -43,7 +43,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a  ng-click="toGame('game3')">
+                        <a ng-click="toGame('game3')">
                             <div class="game-level centered">
                                 <h4>Level 3</h4>
                             </div>
@@ -58,8 +58,11 @@
                 </div>
             </div>
         </div>
-        <h4 class="has-feedback has-error">{{message}}</h4>
-        <section id="game" class="container" ng-show="game1">
+        <hr class="line">
+        <section id="game" ng-show="game1">
+            <div class="game-feedback">
+                <h4 class="has-feedback has-error centered">{{message}}</h4>
+            </div>
             <div class="row">
                 <div class="col-md-9">
                     <div class="col-md-6 hint" ng-repeat="hint in hints | limitTo:hintsNum">
@@ -70,13 +73,13 @@
                     </div>
                 </div>
                 <div class="col-md-3 score align-right">
-                    <h3 class>Possible Score {{currentScore}}</h3>
+                    <h3 class>Possible Score: {{currentScore}}</h3>
                     <button ng-click="showHint()">Get Another Hint</button>
                     <button>Skip</button>
                 </div>
             </div>
             <div>
-                <input type="text" ng-model="answer">
+                <input type="text" value="your answer" ng-model="answer">
                 <button id="button-verify" ng-click="verify()">Verify</button>
             </div>
         </section>

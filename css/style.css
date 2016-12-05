@@ -4,7 +4,8 @@
 }
 
 .logo{
-    max-height: 30px;
+    max-height: 50px;
+    margin: 30px 0 30px 20px;
 }
 
 .navbar-icon{
@@ -83,6 +84,10 @@ a {
     background-color: rgba(45, 135, 181, 0.2);
 }
 
+.hint{
+    margin-top: 20px;
+}
+
 .icon-hint{
     height:30px;
     vertical-align: middle;
@@ -90,8 +95,23 @@ a {
     float:left;
 }
 
+.container #game{
+    margin-top: 30px;
+)}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+    border-bottom: solid 2px #969696;
+}
+
 .game-level{
-    background-color: #f9f9f9;
+    background-color: gainsboro;
     padding: 10px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
@@ -110,13 +130,16 @@ a {
 }
 
 .game-level:hover{
-    background-color: gainsboro;
+    background-color: #cbcece;
 }
 
-.centered{
-    text-align: center;
+.score{
+    margin-top: 20px;
 }
 
+.score button{
+    margin-top:20px;
+}
 
 .score-table{
     background: rgba(1, 57, 120, 0.5);
@@ -166,8 +189,20 @@ button:hover{
     border-radius: 40px;
     width: 80px;
     height: 80px;
+    margin-left:20px;
 }
 
+.game-feedback{
+    background-color: #d43f3a;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    vertical-align: middle;
+}
+
+.game-feedback h4{
+    padding-top: 15px;
+}
 
 
 
@@ -176,5 +211,13 @@ button:hover{
 .align-right{
     text-align: right;
     float:right;
+}
+
+.centered{
+    text-align: center;
+}
+
+.line{
+    border-color: #999999;
 }
 
