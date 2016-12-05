@@ -4,7 +4,7 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-12">
-                        <a onclick="togGame('game')">
+                        <a ng-click="toGame('game6')">
                             <div class="game-level centered">
                                 <h4>Level 6</h4>
                             </div>
@@ -13,14 +13,14 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <a onclick="togGame('game')">
+                        <a ng-click="toGame('game4')">
                             <div class="game-level centered">
                                 <h4>Level 4</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a onclick="togGame('game')">
+                        <a  ng-click="toGame('game5')">
                             <div class="game-level centered">
                                 <h4>Level 5</h4>
                             </div>
@@ -29,21 +29,21 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <a id="game1" onclick="togGame('game'); switchGame(game1)">
+                        <a ng-click="toGame('game1')">
                             <div class="game-level centered">
                                 <h4>Level 1</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a id="game2" onclick="togGame('game'); switchGame(game2)">
+                        <a ng-click="toGame('game2')">
                             <div class="game-level centered">
                                 <h4>Level 2</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a onclick="togGame('game')">
+                        <a  ng-click="toGame('game3')">
                             <div class="game-level centered">
                                 <h4>Level 3</h4>
                             </div>
@@ -54,75 +54,30 @@
             <div class="col-md-3 score">
                 <h3 class="align-right">Your Total Score</h3>
                 <div class="score-table centered">
-                    <h4 class="total-score"></h4>
+                    <h4 class="total-score">{{totalScore}}</h4>
                 </div>
             </div>
         </div>
-
+        <h4 class="has-feedback has-error">{{message}}</h4>
         <section id="game" class="container" ng-show="game1">
             <div class="row">
-                <div class="col-md-6 hint">
-                    <img src="">
-                    <h5>Hint</h5>
-                    <p>{{hint}}</p>
-                </div>
-                <div class="col-md-6 hint">
-                    <img src="">
-                    <h5>Hint</h5>
-                    <p>{{hint}}</p>
-                </div>
-                <div class="col-md-6 hint">
-                    <img src="">
-                    <h5>Hint</h5>
-                    <p>{{hint}}</p>
-                </div>
-                <div class="col-md-6 hint">
-                    <img src="">
-                    <h5>Hint</h5>
-                    <p>{{hint}}</p>
-                    <div class="col-md-9">
-                        <div class="col-md-6 hint">
-                            <img class="icon-hint" src="assets/hint.png">
-                            <h5>Hint 1</h5>
-                            <br/>
-                            <p class="hint-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor invidunt ut
-                                labore 1</p>
-                        </div>
-                        <div class="col-md-6 hint">
-                            <img class="icon-hint" src="assets/hint.png">
-                            <h5>Hint 2</h5>
-                            <br/>
-                            <p class="hint-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor invidunt ut
-                                labore 2</p>
-                        </div>
-                        <div class="col-md-6 hint">
-                            <img class="icon-hint" src="assets/hint.png">
-                            <h5>Hint 3</h5>
-                            <br/>
-                            <p class="hint-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor invidunt ut
-                                labore 3</p>
-                        </div>
-                        <div class="col-md-6 hint">
-                            <img class="icon-hint" src="assets/hint.png">
-                            <h5>Hint 4</h5>
-                            <br/>
-                            <p class="hint-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tempor invidunt ut
-                                labore 4</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 score align-right">
-                        <h3 class>Possible Score</h3>
-                        <h4 class="current-score"></h4>
-                        <button onclick="showHint()">Get Another Hint</button>
-                        <button>Skip</button>
+                <div class="col-md-9">
+                    <div class="col-md-6 hint" ng-repeat="hint in hints | limitTo:hintsNum">
+                        <img class="icon-hint" src="assets/hint.png">
+                        <h5>Hint 1</h5>
+                        <br/>
+                        <p class="hint-text">{{hint}}</p>
                     </div>
                 </div>
-                <input type="text">
-                <button id="button-verify" onclick="verify()">Verify</button>
+                <div class="col-md-3 score align-right">
+                    <h3 class>Possible Score {{currentScore}}</h3>
+                    <button ng-click="showHint()">Get Another Hint</button>
+                    <button>Skip</button>
+                </div>
+            </div>
+            <div>
+                <input type="text" ng-model="answer">
+                <button id="button-verify" ng-click="verify()">Verify</button>
             </div>
         </section>
     </div>
