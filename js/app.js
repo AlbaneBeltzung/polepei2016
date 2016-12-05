@@ -102,4 +102,4 @@
         answer: "blue",
         hints: ["I'm", "blue", "dabadi", "dabada"]
     };
-});
+})();
