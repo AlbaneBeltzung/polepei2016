@@ -192,7 +192,7 @@ button:hover{
     margin-left:20px;
 }
 
-.game-feedback{
+#game-feedback{
     background-color: #d43f3a;
     height: 50px;
     border-radius: 25px;
@@ -200,7 +200,7 @@ button:hover{
     vertical-align: middle;
 }
 
-.game-feedback h4{
+#game-feedback h4{
     padding-top: 15px;
 }
 

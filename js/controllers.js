@@ -12,6 +12,8 @@ citeControllers.controller('headerController', ['$scope', function($scope){
     $scope.closeNav = function() {
         document.getElementById("mySidenav").style.width = "0";
     };
+
+
 }]);
 
 citeControllers.controller('contentMasteryController', ['$scope', '$routeParams', function($scope, $routeParams){
@@ -60,16 +62,13 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
     $scope.toGame = function(gameNum){
         $scope.game = gameNum;
         if($scope.currentLevel >= $scope.games[$scope.game].number){
-            $scope.message = "";
-            $scope.hintsNum = 1;
+            $scope.hintsNum = 0;
             $scope.maxHints = $scope.games[$scope.game].hints.length;
             $scope.hints = $scope.games[$scope.game].hints;
             $scope.currentScore = $scope.games[$scope.game].points;
             $scope.game1 = true;
         }else{
             $scope.message = "You don't have access to this level";
-            $scope.hintsNum = 0;
-            $scope.game1 = false;
         }
     };
 
