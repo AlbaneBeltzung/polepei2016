@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <a ng-click="toGame('game6')">
-                            <div class="game-level centered">
+                            <div id="level6" class="game-level centered">
                                 <h4>Level 6</h4>
                             </div>
                         </a>
@@ -14,14 +14,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <a ng-click="toGame('game4')">
-                            <div class="game-level centered">
+                            <div id="level4" class="game-level centered">
                                 <h4>Level 4</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6">
                         <a ng-click="toGame('game5')">
-                            <div class="game-level centered">
+                            <div id="level5" class="game-level centered">
                                 <h4>Level 5</h4>
                             </div>
                         </a>
@@ -37,14 +37,14 @@
                     </div>
                     <div class="col-md-4">
                         <a ng-click="toGame('game2')">
-                            <div class="game-level centered">
+                            <div id="level2" class="game-level centered">
                                 <h4>Level 2</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a ng-click="toGame('game3')">
-                            <div class="game-level centered">
+                            <div id="level3" class="game-level centered">
                                 <h4>Level 3</h4>
                             </div>
                         </a>
@@ -60,7 +60,7 @@
         </div>
         <hr class="line">
         <section id="game" ng-show="game1">
-            <div class="game-feedback">
+            <div id="game-feedback">
                 <h4 class="has-feedback has-error centered">{{message}}</h4>
             </div>
             <div class="row">

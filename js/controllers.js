@@ -36,31 +36,36 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
         "game2": {
             number: 2,
             answer: "blue",
-            hints: ["I'm", "blue", "dabadi", "dabada"]
+            hints: ["I'm", "blue", "dabadi", "dabada"],
+            id: "level2"
         },
         "game3": {
             number: 3,
             answer: "green",
             points:50,
-            hints: ["blub", "green", "hello", "yeah"]
+            hints: ["blub", "green", "hello", "yeah"],
+            id: "level3"
         },
         "game4": {
             number: 4,
             answer: "yellow",
             points:100,
-            hints: ["blub", "yellow", "hello", "yeah"]
+            hints: ["blub", "yellow", "hello", "yeah"],
+            id: "level4"
         },
         "game5": {
             number: 5,
             answer: "black",
             points:100,
-            hints: ["blub", "black", "hello", "yeah"]
+            hints: ["blub", "black", "hello", "yeah"],
+            id: "level5"
         },
         "game6": {
             number: 6,
             answer: "gray",
             points:200,
-            hints: ["blub", "gray", "hello", "yeah"]
+            hints: ["blub", "gray", "hello", "yeah"],
+            id: "level6"
         }
     };
 
@@ -90,7 +95,8 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
         if($scope.answer == $scope.games[$scope.game].answer){
             $scope.totalScore += $scope.currentScore;
             $scope.message = "Correct, now Play next level";
-            document.getElementById($scope.games[$scope.game].id).style.backgroundColor = "green";
+            document.getElementById($scope.games[$scope.game].id).style.backgroundColor = "#99cc78";
+            document.getElementById('game-feedback').style.backgroundColor = "#99cc78";
             $scope.currentLevel++;
             $scope.toGame('game'+($scope.games[$scope.game].number+1));
         } else {
