@@ -13,8 +13,12 @@ citeControllers.controller('headerController', ['$scope', function($scope){
         document.getElementById("mySidenav").style.width = "0";
     };
 
-
 }]);
+
+function levelAchieved(achievedLevel){
+    document.getElementsByClassName("game-feedback").style.background = "green";
+
+}
 
 citeControllers.controller('contentMasteryController', ['$scope', '$routeParams', function($scope, $routeParams){
 
@@ -26,7 +30,8 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
             number: 1,
             answer: "red",
             points:50,
-            hints: ["blub", "blab", "hello", "yeah"]
+            hints: ["blub", "blab", "hello", "yeah"],
+            id: "level1"
         },
         "game2": {
             number: 2,
@@ -85,6 +90,7 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
         if($scope.answer == $scope.games[$scope.game].answer){
             $scope.totalScore += $scope.currentScore;
             $scope.message = "Correct, now Play next level";
+            document.getElementById($scope.games[$scope.game].id).style.backgroundColor = "green";
             $scope.currentLevel++;
             $scope.toGame('game'+($scope.games[$scope.game].number+1));
         } else {
