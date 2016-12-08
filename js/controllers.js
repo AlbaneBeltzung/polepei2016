@@ -2,6 +2,20 @@
  * Created by Raptor on 13/06/16.
  */
 var citeControllers = angular.module('citeControllers', []);
+citeControllers.controller('LoginController', ['$scope', '$location', function($scope, $location){
+    $scope.user = {};
+    $scope.user.email = 'admin@cemexite.com';
+    $scope.user.password = 'Cemexite2016';
+
+    $scope.login = function(){
+
+        if($scope.user == $scope.user){
+            $location.path('/welcome');
+        }
+
+    }
+
+}]);
 citeControllers.controller('headerController', ['$scope', function($scope){
     /* Set the width of the side navigation to 250px */
     $scope.openNav = function() {
@@ -31,6 +45,7 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
         "game2": {
             number: 2,
             answer: "blue",
+            points:50,
             hints: ["I'm", "blue", "dabadi", "dabada"]
         },
         "game3": {
@@ -69,6 +84,7 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
             $scope.game1 = true;
         }else{
             $scope.message = "You don't have access to this level";
+            $scope.messageClass = "bg-warning";
         }
     };
 
@@ -85,10 +101,12 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
         if($scope.answer == $scope.games[$scope.game].answer){
             $scope.totalScore += $scope.currentScore;
             $scope.message = "Correct, now Play next level";
+            $scope.messageClass = "bg-success";
             $scope.currentLevel++;
             $scope.toGame('game'+($scope.games[$scope.game].number+1));
         } else {
             $scope.message = "Wrong Answer";
+            $scope.messageClass = "bg-danger";
         }
     };
 

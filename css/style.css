@@ -126,7 +126,12 @@ input[type="text"].focus {
 
 
 .game-level h4{
-    color: black;
+     color: black;
+ }
+
+.game-level.active{
+    background-color: green;
+    color: white;
 }
 
 .game-level:hover{
@@ -193,15 +198,15 @@ button:hover{
 }
 
 #game-feedback{
-    background-color: #d43f3a;
     height: 50px;
     border-radius: 25px;
-    color: white;
+    text-align: center;
+    color: black;
     vertical-align: middle;
 }
 
 #game-feedback h4{
-    padding-top: 15px;
+    padding: 15px;
 }
 
 

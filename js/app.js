@@ -10,21 +10,39 @@
 
     cite.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
-            .when('/', {
-                templateUrl: 'templates/inicio.html',
-                controller: 'contentMasteryController'
+            .when("/archive", {
+                templateUrl: "templates/archive.html",
+                controller: ""
             })
-
-            .when("/trainings", {
-                templateUrl: "templates/trainings.html",
-                controller: "contentMasteryController"
-            })
-
             .when("/content-mastery/:game", {
                 templateUrl: "templates/content-mastery.html",
                 controller: "contentMasteryController"
             })
-            .otherwise('/', {
+            .when('/login', {
+                templateUrl: 'templates/login.html',
+                controller: 'LoginController'
+            })
+            .when("/notifications", {
+                templateUrl: "templates/notifications.html",
+                controller: ""
+            })
+            .when("/pole", {
+                templateUrl: "templates/pole.html",
+                controller: ""
+            })
+            .when("/projects", {
+                templateUrl: "templates/projects.html",
+                controller: ""
+            })
+            .when("/trainings", {
+                templateUrl: "templates/trainings.html",
+                controller: "contentMasteryController"
+            })
+            .when('/welcome', {
+                templateUrl: 'templates/inicio.html',
+                controller: 'contentMasteryController'
+            })
+            .otherwise('/login', {
                 templateUrl: 'templates/inicio.html'
             });
     }]);
