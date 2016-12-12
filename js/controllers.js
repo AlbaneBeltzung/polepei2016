@@ -38,46 +38,64 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
     $scope.games = {
         "game1": {
             number: 1,
-            answer: "red",
+            answer: "promptis",
             points:50,
-            hints: ["blub", "blab", "hello", "yeah"]
+            hints: ["Based on the interaction of two CEMEX admixtures.",
+                "Good resistance to shrinkage cracking",
+                "Workability for over 90 minutes, thus allowing the material to be easily handled without the risk of sudden hardening, even under extremely hot weather",
+                "Reaches early compressive strength in as fast as 4 hours , compared with an average of 18 hours in conventional concrete."]
         },
         "game2": {
             number: 2,
-            answer: "blue",
+            answer: "pervia",
             points:50,
-            hints: ["I'm", "blue", "dabadi", "dabada"]
+            hints: ["Can be used for any structural applications (roads, vertical walls, ..)",
+                {img: "assets/IMG_0088.JPG"},
+                "Can be used for light weight or floating structures",
+                "Pororisity can be engineered to absorb, retain and release water on demand."]
         },
         "game3": {
             number: 3,
-            answer: "green",
+            answer: "promptis",
             points:50,
-            hints: ["blub", "green", "hello", "yeah"]
+            hints: ["Based on the interaction of two CEMEX admixtures.",
+                "Good resistance to shrinkage cracking",
+                "Workability for over 90 minutes, thus allowing the material to be easily handled without the risk of sudden hardening, even under extremely hot weather",
+                "Reaches early compressive strength in as fast as 4 hours , compared with an average of 18 hours in conventional concrete."]
         },
         "game4": {
             number: 4,
-            answer: "yellow",
+            answer: "pervia",
             points:100,
-            hints: ["blub", "yellow", "hello", "yeah"]
+            hints: ["Can be used for any structural applications (roads, vertical walls, ..)",
+                {img: "assets/IMG_0088.JPG"},
+                "Can be used for light weight or floating structures",
+                "Pororisity can be engineered to absorb, retain and release water on demand."]
         },
         "game5": {
             number: 5,
-            answer: "black",
+            answer: "promptis",
             points:100,
-            hints: ["blub", "black", "hello", "yeah"]
+            hints: ["Based on the interaction of two CEMEX admixtures.",
+                "Good resistance to shrinkage cracking",
+                "Workability for over 90 minutes, thus allowing the material to be easily handled without the risk of sudden hardening, even under extremely hot weather",
+                "Reaches early compressive strength in as fast as 4 hours , compared with an average of 18 hours in conventional concrete."]
         },
         "game6": {
             number: 6,
-            answer: "gray",
+            answer: "pervia",
             points:200,
-            hints: ["blub", "gray", "hello", "yeah"]
-        }
+            hints: ["Can be used for any structural applications (roads, vertical walls, ..)",
+                {img: "assets/IMG_0088.JPG"},
+                "Can be used for light weight or floating structures",
+                "Pororisity can be engineered to absorb, retain and release water on demand."]
+        },
     };
 
     $scope.toGame = function(gameNum){
         $scope.game = gameNum;
         if($scope.currentLevel >= $scope.games[$scope.game].number){
-            $scope.hintsNum = 0;
+            $scope.hintsNum = 1;
             $scope.maxHints = $scope.games[$scope.game].hints.length;
             $scope.hints = $scope.games[$scope.game].hints;
             $scope.currentScore = $scope.games[$scope.game].points;
@@ -98,7 +116,8 @@ citeControllers.controller('contentMasteryController', ['$scope', '$routeParams'
     };
 
     $scope.verify = function(){
-        if($scope.answer == $scope.games[$scope.game].answer){
+        if($scope.answer.toLowerCase() == $scope.games[$scope.game].answer){
+            $scope.answer = "";
             $scope.totalScore += $scope.currentScore;
             $scope.message = "Correct, now Play next level";
             $scope.messageClass = "bg-success";

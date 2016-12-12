@@ -60,16 +60,17 @@
         </div>
         <hr class="line">
         <section id="game" ng-show="game1">
-            <div id="game-feedback">
+            <div id="game-feedback" ng-if="message">
                 <h4 ng-class="messageClass">{{message}}</h4>
             </div>
             <div class="row">
                 <div class="col-md-9">
                     <div class="col-md-6 hint" ng-repeat="hint in hints | limitTo:hintsNum">
                         <img class="icon-hint" src="assets/hint.png">
-                        <h5>Hint 1</h5>
+                        <h5>Hint {{$index+1}}</h5>
                         <br/>
-                        <p class="hint-text">{{hint}}</p>
+                        <img class="img-responsive" style="border-radius: 10px" ng-show="hint.img" ng-src="{{hint.img}}">
+                        <p ng-hide="hint.img" class="hint-text">{{hint}}</p>
                     </div>
                 </div>
                 <div class="col-md-3 score align-right">

@@ -4,8 +4,13 @@
 }
 
 .logo{
-    max-height: 50px;
-    margin: 30px 0 30px 20px;
+    max-height: 200px;
+    margin: 30px 30px 30px 30px;
+}
+
+.logo-login{
+    max-height: 300px;
+    margin: auto;
 }
 
 .navbar-icon{
@@ -130,12 +135,12 @@ input[type="text"].focus {
  }
 
 .game-level.active{
-    background-color: green;
+    background-color: rgba(42, 155, 34, 0.2);
     color: white;
 }
 
 .game-level:hover{
-    background-color: #cbcece;
+    background-color: #b2b2b2;
 }
 
 .score{
@@ -198,11 +203,14 @@ button:hover{
 }
 
 #game-feedback{
-    height: 50px;
-    border-radius: 25px;
     text-align: center;
     color: black;
     vertical-align: middle;
+}
+
+#game-feedback h4{
+    height: 50px;
+    border-radius: 25px;
 }
 
 #game-feedback h4{
