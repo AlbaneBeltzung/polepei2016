@@ -1,4 +1,19 @@
 <section class="presentation">
     <!--We shold put her our presentation-->
-    <img class="img-responsive" src="http://placehold.it/1920x1080" alt="">
+    <div style="height: 240px">
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(1)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(2)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(3)"></div>
+    </div>
+    <div style="height: 240px">
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(4)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(5)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(6)"></div>
+    </div>
+    <div style="height: 240px">
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(6)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(8)"></div>
+        <div  style="width: 33%; height: 100%; float: left" ng-click="changeImage(9)"></div>
+    </div>
+    <img style="position: absolute; right: 0; top:0; z-index: -1" class="img-responsive" ng-src="{{images[number]}}">
 </section>

@@ -16,12 +16,44 @@ citeControllers.controller('LoginController', ['$scope', '$location', function($
     }
 
 }]);
+citeControllers.controller('PresentationController', ['$scope', function($scope){
+
+    $scope.images = {
+      0:   "assets/presentation/ext1.jpg",
+      1:   "assets/presentation/ext2.jpg",
+      2:   "assets/presentation/ext3.jpg",
+      3:   "assets/presentation/ext4.jpg",
+      4:   "assets/presentation/ext5.jpg",
+      5:   "assets/presentation/ext6.jpg",
+      6:   "assets/presentation/ext7.jpg",
+      7:   "assets/presentation/ext8.jpg",
+      8:   "assets/presentation/ext9.jpg",
+      9:   "assets/presentation/int1.jpg",
+      10:   "assets/presentation/int2.jpg",
+      11:   "assets/presentation/int3.jpg",
+      12:   "assets/presentation/int4.jpg",
+      13:   "assets/presentation/int5.jpg"
+    };
+
+    $scope.number = 0;
+    $scope.currentImage = $scope.images[$scope.number];
+
+    $scope.changeImage = function(block){
+        console.log(block);
+        if(block==3){
+            $scope.number=0;
+        } else {
+            $scope.number++;
+        }
+    }
+
+}]);
 citeControllers.controller('headerController', ['$scope', function($scope){
     /* Set the width of the side navigation to 250px */
     $scope.openNav = function() {
         document.getElementById("mySidenav").style.width = "250px";
     };
-
+    $scope.presentation = true;
     /* Set the width of the side navigation to 0 */
     $scope.closeNav = function() {
         document.getElementById("mySidenav").style.width = "0";

@@ -28,7 +28,7 @@
             })
             .when("/pole", {
                 templateUrl: "templates/pole.html",
-                controller: ""
+                controller: "PresentationController"
             })
             .when("/projects", {
                 templateUrl: "templates/projects.html",
