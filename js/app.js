@@ -26,7 +26,7 @@
                 templateUrl: "templates/notifications.html",
                 controller: ""
             })
-            .when("/pole", {
+            .when("/pole/:number", {
                 templateUrl: "templates/pole.html",
                 controller: "PresentationController"
             })

@@ -14,34 +14,6 @@
     <script src="js/controllers.js"></script>
 </head>
 <body>
-<header ng-controller="headerController" ng-hide="presentation">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-            </form>
-            <div class="navbar-right">
-                <img class="navbar-icon" src="assets/settings.png">
-                <img class="navbar-icon" src="assets/user.png">
-            </div>
-
-
-            <span ng-click="openNav()"><img class="hamburger" src="https://openclipart.org/image/2400px/svg_to_png/221605/menu-icon.png"></span>
-        </div><!-- /.navbar-collapse -->
-        <div id="mySidenav" class="sidenav">
-            <img class="logo" src="assets/cite-logo.png">
-            <a class="closebtn" ng-click="closeNav()">&times;</a>
-            <a href="#/welcome">Dashboard</a>
-            <a href="#/projects">Projects</a>
-            <a href="#/notifications">Notifications</a>
-            <a href="#/trainings">Training</a>
-            <a href="#/archive">Archive</a>
-            <a href="#/pole" ng-click="presentation=true">POLE</a>
-        </div>
-    </nav>
-</header>
 
 <div ng-view></div>
 

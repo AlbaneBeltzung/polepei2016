@@ -1,3 +1,29 @@
+<header ng-controller="headerController" ng-hide="presentation">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-right">
+                <img class="navbar-icon" src="assets/settings.png" ng-click="presenting()">
+                <img class="navbar-icon" src="assets/user.png">
+            </div>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </form>
+            <span ng-click="openNav()"><img class="hamburger" src="https://openclipart.org/image/2400px/svg_to_png/221605/menu-icon.png"></span>
+        </div><!-- /.navbar-collapse -->
+        <div id="mySidenav" class="sidenav">
+            <img class="logo" src="assets/cite-logo.png">
+            <a class="closebtn" ng-click="closeNav()">&times;</a>
+            <a href="#/welcome">Dashboard</a>
+            <a href="#/projects">Projects</a>
+            <a href="#/notifications">Notifications</a>
+            <a href="#/trainings">Training</a>
+            <a href="#/archive">Archive</a>
+            <a href="#/pole/0" ng-click="presenting()">POLE</a>
+        </div>
+    </nav>
+</header>
 <section class="container">
     <div>
         <div class="row">
@@ -59,7 +85,7 @@
             </div>
         </div>
         <hr class="line">
-        <section id="game" ng-show="game1">
+        <section id="game">
             <div id="game-feedback" ng-if="message">
                 <h4 ng-class="messageClass">{{message}}</h4>
             </div>
@@ -77,6 +103,7 @@
                     <h3 class>Possible Score: {{currentScore}}</h3>
                     <button ng-click="showHint()">Get Another Hint</button>
                     <button>Skip</button>
+                    <button><a href="#/pole/19">Back</a></button>
                 </div>
             </div>
             <div>
