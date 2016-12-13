@@ -13,10 +13,9 @@
     <script src="js/controllers.js"></script>
 </head>
 <body>
-<header ng-controller="headerController">
+<header ng-controller="headerController" ng-hide="presentation">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
@@ -38,13 +37,12 @@
             <a href="#/notifications">Notifications</a>
             <a href="#/trainings">Training</a>
             <a href="#/archive">Archive</a>
-            <a href="#/pole">POLE</a>
+            <a href="#/pole" ng-click="presentation=true">POLE</a>
         </div>
     </nav>
 </header>
 
-
-<div id="main" ng-view></div>
+<div ng-view></div>
 
 <footer ng-include="templates/footer.html"></footer>
 
